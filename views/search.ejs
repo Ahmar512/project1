@@ -1,0 +1,26 @@
+<%- include("partials/header.ejs") %>
+<div class="container">
+    <div class="info">
+        <% if(locals.content){ %>
+            <div class="brand_name">
+                <p>Brand Name : <%= content[0].brand_name %> </p>
+            </div>
+            <div class="generic_name">
+                <p> Generic Name :  <%= content[0].generic_name %></p>
+            </div>
+            <div class="product_type">
+                <p>Product Type : <%= content[0].product_type %> </p>
+            </div>
+            <div class="dosage_form">
+                <p>Dosage From : <%= content[0].dosage_form %> </p>
+            </div>
+            <div class="ingr">
+                <p>Ingredients : <% content[0].active_ingredients.forEach(ingr=>{ %>
+                    <%= ingr.name  %> , <%= ingr.strength %> <br>
+               <%  }) %> </p>
+            </div>
+    
+        <% } %>
+    </div>
+</div>
+<%- include("partials/footer.ejs") %>

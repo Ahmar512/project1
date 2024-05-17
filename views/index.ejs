@@ -1,0 +1,26 @@
+<%- include("partials/header.ejs") %>
+<div class="container">
+    <div class="welcome">
+        <div class="text">
+            <h2 data-text="Welcome..." class="title">Welcome...</h2>
+            <p class="message">Welcome to Medi Plus, proudly developed by students from Shri Ramswaroop Memorial University.
+                 We're your go-to destination for medicine information and alternatives. Dedicated to simplifying your search 
+                 for the right medication, our user-friendly interface and reliable database make it easy to find information 
+                 on any medicine and explore alternative options from different pharmaceutical companies.
+                 Our mission is to empower users with transparent and accessible healthcare choices.</p>
+        </div>
+        <div class="img">
+            <img src="/img/medicine.png" alt="medicine png">
+        </div>
+
+    </div>
+    <div class="searching">
+        <div class="input">
+            <form action="/submit" method="POST">
+                <input type="text" name="mediName" placeholder="Enter the medicine name" >
+                <button type="submit" value="OK" >Search</button>
+            </form>
+        </div>
+    </div>
+</div>
+<%- include("partials/footer.ejs") %>
